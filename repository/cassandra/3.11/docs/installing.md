@@ -115,7 +115,7 @@ analytics-cassandra-node-2   2/2     Running   0          122m
 The Cassandra cluster should also report all nodes as "UN":
 
 ```bash
-kubectl exec pod/analytics-cassandra-node-0 \
+kubectl exec analytics-cassandra-node-0 \
         -n production \
         -c cassandra \
         -- \
@@ -137,7 +137,7 @@ The operator deploys a service that provides a DNS record for containers to
 interact with the Cassandra cluster.
 
 ```bash
-kubectl exec -it pod/analytics-cassandra-node-0 \
+kubectl exec -it analytics-cassandra-node-0 \
         -n production \
         -c cassandra \
         -- \
